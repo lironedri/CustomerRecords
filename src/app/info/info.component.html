@@ -1,0 +1,22 @@
+<div class="info" *ngIf="this.customerSlug != '' ">
+    <h1 class="text-center">Customer Record</h1>
+    <br />
+    <table class="table table-bordered secondary-table">
+      <tr>
+        <th class="text-center">First Name</th>
+        <th class="text-center">Last Name</th>
+        <th class="text-center">Age</th>
+        <th class="text-center">Company</th>
+        <th class="text-center">Gender</th>
+        <th class="text-center">Customer ID</th>
+        <th class="text-center">Country</th>
+        <th class="text-center">State</th>
+      </tr>
+      <tr>
+          <td class="text-center" *ngFor="let key of this.customers[this.customerSlug]">{{key}}</td>
+      </tr>
+    </table>
+    <br />
+    <br/><br/>
+  </div>
+  
