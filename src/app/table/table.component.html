@@ -1,19 +1,23 @@
 <div>
     <h1 class="text-center">Customer Records Database</h1>
     <br />
-    <table class="table table-striped main-table">  
-      <tr>
-        <th class="text-center">First Name</th>
-        <th class="text-center">Last Name</th>
-        <th class="text-center">Age</th>
-        <th class="text-center">Details</th>
-      </tr>
-      <tr class="text-center" *ngFor="let customer of this.customers">
-        <td >{{customer.firstName}}</td>
-        <td>{{customer.lastName}}</td>
-        <td>{{customer.age}}</td>
-        <td class="row justify-content-center"><a class="btn btn-default btn-primary" id = {{customer.slug}} role="button" (click)="this.setSlug(customer.slug)">View Info</a></td>
-      </tr>
+    <table class="table table-striped main-table ">  
+      <thead>
+        <tr>
+          <th class="text-center">First Name</th>
+          <th class="text-center">Last Name</th>
+          <th class="text-center">Age</th>
+          <th class="text-center">Details</th>
+        </tr>
+      </thead>
+      <tbody> 
+        <tr class="text-center" *ngFor="let customer of this.customers">
+          <td >{{customer.firstName}}</td>
+          <td>{{customer.lastName}}</td>
+          <td>{{customer.age}}</td>
+          <td class="row justify-content-center"><a class="btn btn-default btn-primary" id = {{customer.slug}} role="button" (click)="this.setSlug(customer.slug)">View Info</a></td>
+        </tr>
+      </tbody>      
   </table>   
 </div> 
 <info-table customerSlug={{getSlug()}}></info-table>
